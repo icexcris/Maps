@@ -24,7 +24,7 @@ try{
 	function autoLoad($class){
 		$director = "classes";
 		$file = $director."/".$class.".class.php";
-		if( is_file() ){
-			//include
+		if( is_file($file) ){
+			include($file);
 		}
 	}
