@@ -21,10 +21,13 @@ try{
 
 //autoloader
 
-	function autoLoad($class){
+	function autoLoadMyClasses($class){
 		$director = "classes";
 		$file = $director."/".$class.".class.php";
 		if( is_file($file) ){
 			include($file);
 		}
 	}
+
+//Register the autoloader	
+spl_autoload_register("autoLoadMyClasses");
