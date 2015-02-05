@@ -13,7 +13,18 @@ try{
     print "Error!: " . $e->getMessage() . "<br/>";
     die();
 }
+
+//theme
+	require_once "../themes/libs/Smarty.class.php";
+	require_once "theme.php";
 //script variables
 
-
 //autoloader
+
+	function autoLoad($class){
+		$director = "classes";
+		$file = $director."/".$class.".class.php";
+		if( is_file() ){
+			//include
+		}
+	}
